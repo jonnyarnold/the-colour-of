@@ -50,4 +50,8 @@ function updateSiteWith(colourData) {
 
 $(document).ready(function() {
   $('#file-upload').on('submit', submitForm);
+
+  var hue = Math.floor(Math.random() * 360)
+  var cssHsl = 'hsl(' + hue + ',50%, 50%)'
+  $('#splash-outer').css('background-color', cssHsl)
 })
