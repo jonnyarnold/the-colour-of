@@ -2,7 +2,7 @@ function submitForm(event)
 {
   event.preventDefault() // Ensure form is not submitted
 
-  // TODO: Loading display
+  setLoadingState()
 
   // Generate file request
   var file = document.getElementById("upload").files[0]
@@ -14,15 +14,31 @@ function submitForm(event)
   var request = new XMLHttpRequest()
   request.open('POST', '/upload', true)
   request.onload = function() {
-    if(request.status === 200) {
-      // TODO: Remove loading display
-      updateSiteWith(JSON.parse(request.responseText))
-    } else {
-      alert('We can\'t process this file. Sorry!')
+    try {
+      if(request.status === 200) {
+        unsetLoadingState()
+        updateSiteWith(JSON.parse(request.responseText))
+      } else {
+        throw "Error"
+      }
+    } catch(e) {
+      alert('We can\'t process this file right now. Sorry!')
     }
   }
   
   request.send(formData)
+}
+
+function setLoadingState() {
+  $('#status').css('visibility', 'visible')
+  $('#submit').attr('disabled: disabled')
+  $('#upload').attr('disabled: disabled')
+}
+
+function unsetLoadingState() {
+  $('#status').css('visibility', 'hidden')
+  $('#submit').removeAttr('disabled')
+  $('#upload').removeAttr('disabled')
 }
 
 function updateSiteWith(colourData) {

@@ -3,7 +3,7 @@ from mean import mean_colour
 from colours import colour_name
 import os
 
-STATIC_FILETYPES = ['.js', '.css']
+STATIC_FILETYPES = ['.js', '.css', '.gif']
 
 @get('/upload')
 def show_upload():
