@@ -1,6 +1,7 @@
 from bottle import get, post, static_file, request, run
 from mean import mean_colour
 from colours import colour_name
+import os
 
 STATIC_FILETYPES = ['.js', '.css']
 
