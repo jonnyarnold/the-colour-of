@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Colour Of</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div id='splash-outer'>
+      <div id='splash-inner'>
+        <h1 id='title'>What would you like to know the colour of?</h1>
+        <h2 id='subtitle'>Upload an image below:</h2>
+
+        <form id="file-upload" action="/upload" method="post" enctype="multipart/form-data">
+          <input id='upload' type='file' name='upload' accept='image/jpeg,image/png' />
+          <input type='submit' />
+        </form>
+      </div>
+    </div>    
+  </body>
+</html>
