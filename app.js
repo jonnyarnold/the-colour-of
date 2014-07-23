@@ -31,8 +31,8 @@ function submitForm(event)
 
 function setLoadingState() {
   $('#status').css('visibility', 'visible')
-  $('#submit').attr('disabled: disabled')
-  $('#upload').attr('disabled: disabled')
+  $('#submit').attr('disabled', 'disabled')
+  $('#upload').attr('disabled', 'disabled')
 }
 
 function unsetLoadingState() {
