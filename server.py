@@ -21,4 +21,4 @@ def static(path):
 
   return static_file(path, root='.')
 
-run(host='localhost', port=8000)
+run()
