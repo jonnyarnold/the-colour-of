@@ -17,10 +17,17 @@ input {
   color: black;
   padding: 0.25em 1em;
   border-radius: 0.25em;
+
+  transition: all 0.5s;
 }
 
 input:hover {
   background-color: white;
+}
+
+input:disabled {
+  color: #999;
+  background-color: transparent;
 }
 
 h1 {
