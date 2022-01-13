@@ -1,4 +1,4 @@
 argparse==1.2.1
 bottle==0.12.7
 wsgiref==0.1.2
-pillow==6.2.0
+pillow==9.0.0
